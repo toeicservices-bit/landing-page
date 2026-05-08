@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI VIBE 2026 - Đào tạo Thiết kế Slide chuyên nghiệp | VTNet</title>
+    
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- TAILWIND CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- LUCIDE ICONS -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        viettel: {
+                            red: '#EE0033',
+                            dark: '#C10029',
+                            light: '#FFEBEE'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Be Vietnam Pro', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'xl': '12px',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #1a1a1a; }
+        h1, h2, h3, h4 { font-family: 'Be Vietnam Pro', sans-serif; line-height: 1.2; }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-primary {
+            background-color: #EE0033;
+            color: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-primary:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px -5px rgba(238, 0, 51, 0.4);
+            background-color: #D1002D;
+        }
+        .btn-primary:active { transform: scale(0.98); }
+
+        .feature-card {
+            transition: all 0.4s ease;
+            border: 1px solid transparent;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(238, 0, 51, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #EE0033, #FF4D79);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .countdown-item {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1rem;
+            min-width: 80px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="bg-white overflow-x-hidden">
+
+    <!-- 1. NAVIGATION -->
+    <nav class="fixed top-0 w-full z-50 glass-nav h-20 flex items-center">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-viettel-red rounded-lg flex items-center justify-center text-white font-bold text-xl">V</div>
+                <span class="font-heading font-bold text-xl tracking-tight">VTNet <span class="text-viettel-red">AI VIBE</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-medium text-sm text-gray-600">
+                <a href="#features" class="hover:text-viettel-red transition-colors">Tính năng</a>
+                <a href="#program" class="hover:text-viettel-red transition-colors">Chương trình</a>
+                <a href="#register" class="hover:text-viettel-red transition-colors">Đăng ký</a>
+            </div>
+            <a href="#register" class="btn-primary px-6 py-2.5 rounded-full text-sm font-semibold">Đăng ký ngay</a>
+        </div>
+    </nav>
+
+    <!-- 2. HERO SECTION -->
+    <section class="relative pt-40 pb-24 md:pt-56 md:pb-40 overflow-hidden">
+        <div class="absolute top-0 right-0 -z-10 w-1/2 h-full opacity-10 animate-float">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#EE0033" d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.6,90,-16.3,88.5,-0.9C87,14.6,81.4,29.1,72.6,41.4C63.8,53.7,51.8,63.7,38.3,71.5C24.8,79.3,9.8,84.9,-4.4,92.5C-18.6,100.1,-37.1,109.8,-51.7,105.1C-66.3,100.4,-77,81.3,-84.6,63.4C-92.2,45.5,-96.7,28.8,-96.1,12.7C-95.5,-3.4,-89.8,-18.9,-81.2,-32.8C-72.6,-46.7,-61.1,-58.9,-47.8,-66.6C-34.5,-74.3,-19.3,-77.5,-2.7,-72.8C13.9,-68.1,27.8,-55.5,44.7,-76.4Z" transform="translate(100 100)" />
+            </svg>
+        </div>
+
+        <div class="container mx-auto px-6 text-center md:text-left">
+            <div class="max-w-4xl">
+                <div class="inline-block px-4 py-1.5 mb-6 bg-viettel-light text-viettel-red rounded-full font-bold text-xs uppercase tracking-widest animate-fade-in-up">
+                    Đào tạo nội bộ VTNet 2026
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-8 animate-fade-in-up" style="animation-delay: 0.1s">
+                    Làm chủ <span class="gradient-text">Tư duy Slide AI</span> <br class="hidden md:block"> Nâng tầm thuyết trình
+                </h1>
+                <p class="text-xl text-gray-600 mb-12 max-w-2xl animate-fade-in-up" style="animation-delay: 0.2s">
+                    Khóa đào tạo đặc biệt giúp CBCNV VTNet biến các báo cáo khô khan thành tác phẩm nghệ thuật chỉ trong vài phút với sức mạnh của trí tuệ nhân tạo.
+                </p>
+                <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 animate-fade-in-up" style="animation-delay: 0.3s">
+                    <a href="#register" class="btn-primary w-full md:w-auto px-10 py-4 rounded-full text-lg font-bold">
+                        Đăng ký tham gia ngay
+                    </a>
+                    <div class="flex items-center space-x-3 text-gray-500 font-medium">
+                        <i data-lucide="calendar" class="w-5 h-5 text-viettel-red"></i>
+                        <span>Sáng Thứ Sáu, 08/05/2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. COUNTDOWN TIMER -->
+    <div class="container mx-auto px-6 mb-24">
+        <div class="bg-gray-50 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-8 md:mb-0">
+                <h3 class="text-2xl font-bold mb-2">Hạn đăng ký đang kết thúc</h3>
+                <p class="text-gray-500">Đăng ký trước 23h59 ngày 06/05/2026</p>
+            </div>
+            <div id="countdown" class="flex space-x-4 md:space-x-6">
+                <div class="countdown-item">
+                    <span id="days" class="block text-3xl font-extrabold text-viettel-red">00</span>
+                    <span class="text-xs uppercase tracking-tighter text-gray-400">Ngày</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours" class="block text-3xl font-extrabold text-viettel-red">00</span>
+                    <span class="text-xs uppercase tracking-tighter text-gray-400">Giờ</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes" class="block text-3xl font-extrabold text-viettel-red">00</span>
+                    <span class="text-xs uppercase tracking-tighter text-gray-400">Phút</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds" class="block text-3xl font-extrabold text-viettel-red">00</span>
+                    <span class="text-xs uppercase tracking-tighter text-gray-400">Giây</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. FEATURES -->
+    <section id="features" class="py-24 md:py-32 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Tại sao bạn không nên bỏ lỡ?</h2>
+                <p class="text-lg text-gray-500">Học cách kết hợp tư duy thẩm mỹ con người với tốc độ xử lý của AI.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card bg-white p-10 rounded-2xl">
+                    <div class="w-14 h-14 bg-viettel-light rounded-xl flex items-center justify-center text-viettel-red mb-8">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Tốc độ đột phá</h3>
+                    <p class="text-gray-600">Hoàn thành bộ Slide báo cáo tuần/tháng từ 4 tiếng rút ngắn xuống còn 15 phút với Gamma & Canva AI.</p>
+                </div>
+                <div class="feature-card bg-white p-10 rounded-2xl">
+                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-8">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Chuẩn Brand Viettel</h3>
+                    <p class="text-gray-600">Nắm vững bộ quy chuẩn thiết kế Viettel Networks (Logo, Font, Layout) để tạo sự đồng bộ chuyên nghiệp.</p>
+                </div>
+                <div class="feature-card bg-white p-10 rounded-2xl">
+                    <div class="w-14 h-14 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600 mb-8">
+                        <i data-lucide="brain-circuit"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Tư duy AI Prompt</h3>
+                    <p class="text-gray-600">Cách viết câu lệnh (Prompt) "đọc vị" AI để ra được slide đúng ý ngay từ lần đầu tiên.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. PROGRAM TIMELINE -->
+    <section id="program" class="py-24 md:py-32">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-16 items-start">
+                <div class="md:w-1/3 sticky top-32">
+                    <h2 class="text-4xl font-bold mb-6">Nội dung <br> chương trình</h2>
+                    <p class="text-gray-500 mb-8">Lộ trình học tập từ cơ bản đến nâng cao trong vòng 04 giờ đào tạo tập trung.</p>
+                    <div class="p-6 border border-gray-100 rounded-2xl bg-gray-50">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <i data-lucide="user-check" class="text-viettel-red"></i>
+                            <span class="font-bold">Giảng viên: Expert L&D VTNet</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i data-lucide="map-pin" class="text-viettel-red"></i>
+                            <span class="font-bold">Phòng Lab - Tầng 15, Tòa nhà VTNet</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-2/3 space-y-12">
+                    <div class="relative pl-12 border-l-2 border-gray-100 pb-2">
+                        <div class="absolute -left-3 top-0 w-6 h-6 bg-viettel-red rounded-full ring-8 ring-white"></div>
+                        <span class="text-viettel-red font-bold text-sm uppercase">Phần 01 - 08:30 - 09:30</span>
+                        <h3 class="text-2xl font-bold mt-2 mb-4">Tư duy thiết kế & Chuẩn hóa dữ liệu</h3>
+                        <p class="text-gray-600">Nguyên tắc thiết kế Slide hiện đại. Cách sử dụng Markdown để AI hiểu cấu trúc tài liệu của bạn nhanh nhất.</p>
+                    </div>
+                    <div class="relative pl-12 border-l-2 border-gray-100 pb-2">
+                        <div class="absolute -left-3 top-0 w-6 h-6 bg-gray-200 rounded-full ring-8 ring-white"></div>
+                        <span class="text-gray-400 font-bold text-sm uppercase">Phần 02 - 09:30 - 10:45</span>
+                        <h3 class="text-2xl font-bold mt-2 mb-4">Thực hành AI Tools (Gamma & Gemini)</h3>
+                        <p class="text-gray-600">Thực hành tạo Slide trực tiếp từ file Word/PDF. Tinh chỉnh Layout tự động theo phong cách chuyên nghiệp.</p>
+                    </div>
+                    <div class="relative pl-12 border-l-2 border-gray-100 pb-2">
+                        <div class="absolute -left-3 top-0 w-6 h-6 bg-gray-200 rounded-full ring-8 ring-white"></div>
+                        <span class="text-gray-400 font-bold text-sm uppercase">Phần 03 - 11:00 - 12:00</span>
+                        <h3 class="text-2xl font-bold mt-2 mb-4">Landing Page & Claude Skills</h3>
+                        <p class="text-gray-600">Nâng cao: Cách dùng AI thiết kế trang web giới thiệu dự án nội bộ và xây dựng bộ Skill tự động hóa nghiệp vụ.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. REGISTRATION FORM -->
+    <section id="register" class="py-24 bg-viettel-red text-white overflow-hidden relative">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"/></pattern></defs>
+                <rect width="100" height="100" fill="url(#grid)" />
+            </svg>
+        </div>
+        
+        <div class="container mx-auto px-6 relative">
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row text-gray-900">
+                <div class="md:w-1/2 p-12 bg-gray-50">
+                    <h2 class="text-3xl font-bold mb-6">Đăng ký tham gia</h2>
+                    <p class="text-gray-500 mb-8">Vui lòng điền đầy đủ thông tin để BTC sắp xếp vị trí và tài khoản thực hành AI cho bạn.</p>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-viettel-light p-3 rounded-lg text-viettel-red"><i data-lucide="alert-circle"></i></div>
+                            <p class="text-sm font-medium">Khóa học giới hạn 50 học viên để đảm bảo chất lượng hướng dẫn trực tiếp.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="registrationForm" class="md:w-1/2 p-12 space-y-5">
+                    <div>
+                        <label class="block text-sm font-bold mb-2">Họ và tên *</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-viettel-red focus:ring-2 focus:ring-viettel-red focus:ring-opacity-20 outline-none transition-all" placeholder="Nguyễn Văn A">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2">Mã nhân viên *</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-viettel-red focus:ring-2 focus:ring-viettel-red focus:ring-opacity-20 outline-none transition-all" placeholder="123456">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2">Email Viettel *</label>
+                        <input type="email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-viettel-red focus:ring-2 focus:ring-viettel-red focus:ring-opacity-20 outline-none transition-all" placeholder="anv@viettel.com.vn">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2">Phòng/Ban công tác *</label>
+                        <select required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-viettel-red focus:ring-2 focus:ring-viettel-red focus:ring-opacity-20 outline-none transition-all">
+                            <option value="">Chọn đơn vị</option>
+                            <option>Trung tâm Vận hành khai thác</option>
+                            <option>Trung tâm Kỹ thuật khu vực</option>
+                            <option>Khối Cơ quan TCT</option>
+                            <option>Khác</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary w-full py-4 rounded-xl font-bold mt-4 shadow-xl">Gửi yêu cầu đăng ký</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FOOTER -->
+    <footer class="py-12 bg-white border-t border-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center items-center space-x-2 mb-6">
+                <div class="w-8 h-8 bg-viettel-red rounded-md flex items-center justify-center text-white font-bold text-lg">V</div>
+                <span class="font-heading font-bold text-lg">VTNet AI VIBE</span>
+            </div>
+            <p class="text-gray-400 text-sm">© 2026 Tổng Công ty Mạng lưới Viettel. Tài liệu lưu hành nội bộ.</p>
+        </div>
+    </footer>
+
+    <!-- STICKY CTA (Bottom Right) -->
+    <a href="#register" class="fixed bottom-8 right-8 z-40 bg-viettel-red text-white p-4 rounded-full shadow-2xl transition-transform hover:scale-110 active:scale-95 group">
+        <i data-lucide="pen-tool" class="w-6 h-6"></i>
+        <span class="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-gray-900 text-white px-3 py-1.5 rounded-lg text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Đăng ký ngay</span>
+    </a>
+
+    <!-- SUCCESS MODAL (Hidden by default) -->
+    <div id="successModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black bg-opacity-50 hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white p-10 rounded-3xl max-w-sm w-full text-center shadow-2xl">
+            <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+                <i data-lucide="check-circle"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Thành công!</h3>
+            <p class="text-gray-500 mb-8">Yêu cầu đăng ký của bạn đã được ghi nhận. BTC sẽ liên hệ qua email Viettel.</p>
+            <button onclick="closeModal()" class="w-full bg-gray-900 text-white py-3 rounded-xl font-bold">Đóng</button>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Khởi tạo icons
+        lucide.createIcons();
+
+        // COUNTDOWN TIMER LOGIC
+        function updateCountdown() {
+            const deadline = new Date("May 06, 2026 23:59:59").getTime();
+            const now = new Date().getTime();
+            const diff = deadline - now;
+
+            if (diff <= 0) {
+                document.getElementById('countdown').innerHTML = "HẾT HẠN ĐĂNG KÝ";
+                return;
+            }
+
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = d.toString().padStart(2, '0');
+            document.getElementById('hours').innerText = h.toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = m.toString().padStart(2, '0');
+            document.getElementById('seconds').innerText = s.toString().padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // FORM SUBMISSION
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const modal = document.getElementById('successModal');
+            modal.classList.remove('hidden');
+            setTimeout(() => modal.classList.add('opacity-100'), 10);
+        });
+
+        function closeModal() {
+            const modal = document.getElementById('successModal');
+            modal.classList.remove('opacity-100');
+            setTimeout(() => modal.classList.add('hidden'), 300);
+        }
+    </script>
+</body>
+</html>
